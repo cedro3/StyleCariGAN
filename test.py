@@ -33,7 +33,7 @@ def generate(
 
         utils.save_image(
             img['result'],
-            os.path.join(args.current_output_dir, f'{i}.png'),
+            os.path.join(args.current_output_dir, str(i).zfill(3)+'.png'),
             nrow=1,
             normalize=True,
             range=(-1, 1),
